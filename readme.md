@@ -1,30 +1,54 @@
 # @stackline/vfile
 
-Independent maintenance fork of `vfile@5.3.7`, preserving its API and published type declarations.
+> Virtual file format for text processing.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/vfile.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/vfile)
+[![license](https://img.shields.io/npm/l/@stackline/vfile.svg?style=flat-square)](https://github.com/alexandroit/stackline-vfile)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-vfile-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-vfile)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/vfile/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/vfile/)** | **[npm](https://www.npmjs.com/package/@stackline/vfile)** | **[Issues](https://github.com/alexandroit/stackline-vfile/issues)** | **[Repository](https://github.com/alexandroit/stackline-vfile)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/vfile` is the Stackline-maintained distribution of `vfile@5.3.7`. It is an independent continuation of [vfile](https://github.com/vfile/vfile); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/vfile@1.0.1` |
+| API target | `vfile@5.3.7` |
+| Supported Node.js | `See supported framework requirements` |
+| License | `MIT` |
+| Module type | `module` |
+| Main entry | `index.js` |
+| Types | `index.d.ts` |
+| Runtime dependencies | `is-buffer, @types/unist, vfile-message, unist-util-stringify-position` |
+
+## Installation
+
+```bash
 npm install @stackline/vfile
-# Keep existing imports:
-npm install vfile@npm:@stackline/vfile@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-vfile/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install vfile@npm:@stackline/vfile
+```
 
-## Upstream documentation
+## Usage and API reference
 
 <h1>
-  <img src="https://raw.githubusercontent.com/vfile/vfile/fc8164b/logo.svg?sanitize=true" alt="vfile" />
+  <img src="https://raw.githubusercontent.com/vfile/vfile/fc8164b/logo.svg?sanitize=true" alt="@stackline/vfile" />
 </h1>
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 **vfile** is a small and browser friendly virtual file format that tracks
 metadata about files (such as its `path` and `value`) and lint [messages][].
@@ -107,7 +131,7 @@ This package is [ESM only][esm].
 In Node.js (version 14.14 and 16.0+), install with [npm][]:
 
 ```sh
-npm install vfile
+npm install @stackline/vfile
 ```
 
 In Deno with [`esm.sh`][esmsh]:
@@ -127,7 +151,7 @@ In browsers with [`esm.sh`][esmsh]:
 ## Use
 
 ```js
-import {VFile} from 'vfile'
+import {VFile} from '@stackline/vfile'
 
 const file = new VFile({
   path: '~/example.txt',
@@ -416,7 +440,7 @@ interface DataMap {}
 ###### Example
 
 ```ts
-declare module 'vfile' {
+declare module '@stackline/vfile' {
   interface DataMap {
     // `file.data.name` is typed as `string`
     name: string
@@ -648,7 +672,7 @@ Support this effort and give back by sponsoring on [OpenCollective][collective]!
 <tr valign="middle">
 <td width="20%" align="center" rowspan="2" colspan="2">
   <a href="https://www.netlify.com">Netlify</a><br><br>
-  <!--OC has a sharper image-->
+  
   <a href="https://www.netlify.com"><img src="https://images.opencollective.com/netlify/4087de2/logo/256.png" width="128"></a>
 </td>
 <td width="10%" align="center">
@@ -705,7 +729,7 @@ for contributing commits since!
 
 [MIT][license] © [Titus Wormer][author]
 
-<!-- Definitions -->
+
 
 [build-badge]: https://github.com/vfile/vfile/workflows/main/badge.svg
 
@@ -800,3 +824,27 @@ for contributing commits since!
 [api-reporter-settings]: #reportersettings
 
 [api-value]: #value
+
+## Credits and original authors
+
+- Original project: [vfile](https://github.com/vfile/vfile).
+- Titus Wormer.
+- Brendan Abbott.
+- Denys Dovhan.
+- Kyle Mathews.
+- Shinnosuke Watanabe.
+- Sindre Sorhus.
+- Copyright (c) 2015 Titus Wormer <tituswormer@gmail.com>.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
