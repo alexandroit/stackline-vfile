@@ -4,7 +4,7 @@
     {
       "name": "@stackline/vfile",
       "path": "readme.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "baselineVersion": "1.0.0",
       "keywords": [
         "stackline",
@@ -26,8 +26,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/vfile/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/vfile/-/vfile-1.0.0.tgz",
       "baselineIntegrity": "sha512-HIC0XUIemSefkPsQIvFt5+rWIyicT+hM2ju3JfUymO0jzX0bDOCmDhLjwpSjr1Cgd5eePv92O6f2hSyc8AnqHA==",
-      "expectedSha512": "951db636d205328542ec349c19a7cc939998018691c63b1678398667da3d0ff498ff183414cc757ea64cdd1e716d5af430a1f65ea1eb20756f735436806cacd6",
-      "tag": "docs-stackline-vfile-v1.0.1"
+      "expectedSha512": "1574bdebe7fba02cc036622d0f27ac1b2a7d0189b70740e1c56202a833a9d04f5bf6dd8133cdd2dfe0842af56fceaab81c360218be652eaf5733fba37eef8efb",
+      "tag": "docs-stackline-vfile-v1.0.2"
     }
   ]
 }
