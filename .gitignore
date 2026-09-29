@@ -5,3 +5,8 @@ test.d.ts
 node_modules/
 coverage/
 yarn.lock
+
+node_modules/
+artifact/
+.package-consumer/
+*.tgz

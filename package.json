@@ -1,8 +1,41 @@
 {
-  "name": "vfile",
-  "version": "5.3.7",
-  "description": "Virtual file format for text processing",
+  "xo": {
+    "rules": {
+      "unicorn/prefer-code-point": "off",
+      "unicorn/prefer-node-protocol": "off"
+    },
+    "prettier": true
+  },
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-vfile/issues"
+  },
+  "main": "index.js",
+  "name": "@stackline/vfile",
+  "type": "module",
+  "types": "index.d.ts",
+  "author": {
+    "url": "https://wooorm.com",
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com"
+  },
+  "browser": {
+    "./lib/minurl.js": "./lib/minurl.browser.js",
+    "./lib/minpath.js": "./lib/minpath.browser.js",
+    "./lib/minproc.js": "./lib/minproc.browser.js"
+  },
+  "funding": {
+    "url": "https://opencollective.com/unified",
+    "type": "opencollective"
+  },
   "license": "MIT",
+  "scripts": {
+    "test:upstream": "node --conditions development test.js",
+    "test": "npm run test:upstream",
+    "build": "node scripts/check-payload.mjs",
+    "test:package": "node scripts/test-package.mjs",
+    "test:types": "tsc --ignoreConfig --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 --strict test/stackline-types.mts"
+  },
+  "homepage": "https://github.com/alexandroit/stackline-vfile#readme",
   "keywords": [
     "vfile",
     "virtual",
@@ -14,80 +47,62 @@
     "error",
     "remark",
     "retext",
-    "rehype"
+    "rehype",
+    "stackline",
+    "maintenance-fork"
   ],
-  "repository": "vfile/vfile",
-  "bugs": "https://github.com/vfile/vfile/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": false
   },
-  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-  "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-    "Brendan Abbott <brendan.abbott@temando.com>",
-    "Denys Dovhan <email@denysdovhan.com>",
-    "Kyle Mathews <mathews.kyle@gmail.com>",
-    "Shinnosuke Watanabe <snnskwtnb@gmail.com>",
-    "Sindre Sorhus <sindresorhus@gmail.com>"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-vfile.git"
+  },
+  "description": "Virtual file format for text processing",
+  "directories": {},
   "sideEffects": false,
-  "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "browser": {
-    "./lib/minpath.js": "./lib/minpath.browser.js",
-    "./lib/minproc.js": "./lib/minproc.browser.js",
-    "./lib/minurl.js": "./lib/minurl.browser.js"
-  },
-  "react-native": {
-    "./lib/minpath.js": "./lib/minpath.browser.js",
-    "./lib/minproc.js": "./lib/minproc.browser.js",
-    "./lib/minurl.js": "./lib/minurl.browser.js"
-  },
-  "files": [
-    "lib/",
-    "index.d.ts",
-    "index.js"
+  "contributors": [
+    {
+      "url": "https://wooorm.com",
+      "name": "Titus Wormer",
+      "email": "tituswormer@gmail.com"
+    },
+    {
+      "name": "Brendan Abbott",
+      "email": "brendan.abbott@temando.com"
+    },
+    {
+      "name": "Denys Dovhan",
+      "email": "email@denysdovhan.com"
+    },
+    {
+      "name": "Kyle Mathews",
+      "email": "mathews.kyle@gmail.com"
+    },
+    {
+      "name": "Shinnosuke Watanabe",
+      "email": "snnskwtnb@gmail.com"
+    },
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com"
+    }
   ],
   "dependencies": {
-    "@types/unist": "^2.0.0",
     "is-buffer": "^2.0.0",
-    "unist-util-stringify-position": "^3.0.0",
-    "vfile-message": "^3.0.0"
+    "@types/unist": "^2.0.0",
+    "vfile-message": "^3.0.0",
+    "unist-util-stringify-position": "^3.0.0"
   },
-  "devDependencies": {
-    "@types/node": "^18.0.0",
-    "c8": "^7.0.0",
-    "prettier": "^2.0.0",
-    "remark-cli": "^11.0.0",
-    "remark-preset-wooorm": "^9.0.0",
-    "type-coverage": "^2.0.0",
-    "typescript": "^4.0.0",
-    "xo": "^0.53.0"
-  },
-  "scripts": {
-    "prepack": "npm run build && npm run format",
-    "build": "tsc --build --clean && tsc --build && type-coverage",
-    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
-    "test-api": "node --conditions development test.js",
-    "test-coverage": "c8 --check-coverage --100 --reporter lcov npm run test-api",
-    "test": "npm run build && npm run format && npm run test-coverage"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "bracketSpacing": false,
-    "semi": false,
-    "trailingComma": "none"
-  },
-  "xo": {
-    "prettier": true,
-    "rules": {
-      "unicorn/prefer-code-point": "off",
-      "unicorn/prefer-node-protocol": "off"
-    }
+  "react-native": {
+    "./lib/minurl.js": "./lib/minurl.browser.js",
+    "./lib/minpath.js": "./lib/minpath.browser.js",
+    "./lib/minproc.js": "./lib/minproc.browser.js"
   },
   "remarkConfig": {
     "plugins": [
@@ -99,13 +114,46 @@
     ]
   },
   "typeCoverage": {
-    "atLeast": 100,
+    "#": "needed `any`s",
     "detail": true,
     "strict": true,
+    "atLeast": 100,
     "ignoreCatch": true,
-    "#": "needed `any`s",
     "ignoreFiles": [
       "lib/minurl.shared.d.ts"
     ]
-  }
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "24.12.2"
+  },
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/index.d.ts",
+    "lib/index.js",
+    "lib/minpath.browser.d.ts",
+    "lib/minpath.browser.js",
+    "lib/minpath.d.ts",
+    "lib/minpath.js",
+    "lib/minproc.browser.d.ts",
+    "lib/minproc.browser.js",
+    "lib/minproc.d.ts",
+    "lib/minproc.js",
+    "lib/minurl.browser.d.ts",
+    "lib/minurl.browser.js",
+    "lib/minurl.d.ts",
+    "lib/minurl.js",
+    "lib/minurl.shared.d.ts",
+    "lib/minurl.shared.js",
+    "license",
+    "readme.md",
+    "UPSTREAM.md",
+    "NOTICE",
+    "CHANGELOG.md"
+  ]
 }

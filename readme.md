@@ -1,3 +1,19 @@
+# @stackline/vfile
+
+Independent maintenance fork of `vfile@5.3.7`, preserving its API and published type declarations.
+
+```sh
+npm install @stackline/vfile
+# Keep existing imports:
+npm install vfile@npm:@stackline/vfile@1.0.0
+```
+
+[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-vfile/issues) · [Community](https://www.reddit.com/r/Stackline/)
+
+See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+
+## Upstream documentation
+
 <h1>
   <img src="https://raw.githubusercontent.com/vfile/vfile/fc8164b/logo.svg?sanitize=true" alt="vfile" />
 </h1>
