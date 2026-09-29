@@ -1,0 +1,33 @@
+{
+  "repository": "alexandroit/stackline-vfile",
+  "packages": [
+    {
+      "name": "@stackline/vfile",
+      "path": "readme.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "vfile",
+        "typescript",
+        "virtual",
+        "file",
+        "text",
+        "processing",
+        "message",
+        "warning",
+        "error",
+        "remark",
+        "retext",
+        "rehype",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/vfile/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/vfile/-/vfile-1.0.0.tgz",
+      "baselineIntegrity": "sha512-HIC0XUIemSefkPsQIvFt5+rWIyicT+hM2ju3JfUymO0jzX0bDOCmDhLjwpSjr1Cgd5eePv92O6f2hSyc8AnqHA==",
+      "expectedSha512": "951db636d205328542ec349c19a7cc939998018691c63b1678398667da3d0ff498ff183414cc757ea64cdd1e716d5af430a1f65ea1eb20756f735436806cacd6",
+      "tag": "docs-stackline-vfile-v1.0.1"
+    }
+  ]
+}
